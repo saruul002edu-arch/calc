@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="500.0" prefWidth="350.0" spacing="20.0" style="-fx-padding: 10; -fx-background-color: #faf0e6;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator.PrimaryController">
+<VBox prefHeight="500.0" prefWidth="350.0" spacing="20.0" style="-fx-padding: 10; -fx-background-color: #faf0e6; -fx-border-color: #d9b99b; -fx-border-width: 10;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calculator.PrimaryController">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
@@ -114,14 +114,24 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="21.0" layoutY="23.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="140.0" style="-fx-background-radius: 40; -fx-background-color: #d9b99b; -fx-text-fill: white;" text="C" GridPane.columnSpan="2">
+            <Button layoutX="21.0" layoutY="23.0" mnemonicParsing="false" onAction="#onClearClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 40; -fx-background-color: #d9b99b; -fx-text-fill: white;" text="C" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="187.0" layoutY="362.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="140.0" style="-fx-background-radius: 30; -fx-background-color: #d9b99b; -fx-text-fill: white;" text="=" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4">
+            <Button layoutX="187.0" layoutY="362.0" mnemonicParsing="false" onAction="#onEqualClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 30; -fx-background-color: #d9b99b; -fx-text-fill: white;" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <font>
                   <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="187.0" layoutY="356.0" mnemonicParsing="false" onAction="#onOpenParenClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 40; -fx-background-color: #d9b99b; -fx-text-fill: white;" text="(">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="21.0" layoutY="22.0" mnemonicParsing="false" onAction="#onCloseParenClick" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 40; -fx-background-color: #d9b99b; -fx-text-fill: white;" text=")" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
          </children>
